@@ -176,9 +176,9 @@ const People = () => {
                 <thead>
                     <tr className="bg-gray-200">
                         {[
-                           
                             "Name",
                             "Surname",
+                            "African Number",
                             "Mobile",
                             "Email",
                             "Birth Date",
@@ -201,9 +201,9 @@ const People = () => {
                             <tr key={person.id} className="border-b">
                                 {Object.keys(formData)
                                     .filter(
-                                        (field) =>
-                                            field !== "id" &&
-                                            field !== "id_number"
+                                        (field) => field !== "id"
+                                        //  &&
+                                        // field !== "id_number"
                                     ) // Exclude fields
                                     .map((field) => (
                                         <td
@@ -215,17 +215,46 @@ const People = () => {
                                                 : person[field]}
                                         </td>
                                     ))}
-                                <td className="px-6 py-4 flex space-x-3">
+                                <td className=" py-4 flex space-x-2">
                                     <button
                                         onClick={() => handleEdit(person)}
-                                        className="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow-md transition duration-300"
+                                        className="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-medium px-3 py-1.5 rounded shadow-md transition duration-300"
                                     >
+                                        <svg
+                                            className="w-4 h-4 mr-1"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-7.036a2.828 2.828 0 114 4l-10 10a4 4 0 01-1.414.586l-4.242.707a1 1 0 01-1.212-1.212l.707-4.242a4 4 0 01.586-1.414l10-10z"
+                                            ></path>
+                                        </svg>
                                         Edit
                                     </button>
+
                                     <button
                                         onClick={() => handleDelete(person.id)}
-                                        className="flex items-center bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md shadow-md transition duration-300"
+                                        className="flex items-center bg-red-500 hover:bg-red-600 text-white font-medium px-3 py-1.5 rounded shadow-md transition duration-300"
                                     >
+                                        <svg
+                                            className="w-4 h-4 mr-1"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5-4h4a1 1 0 011 1v2H9V4a1 1 0 011-1zm-4 5h10"
+                                            ></path>
+                                        </svg>
                                         Delete
                                     </button>
                                 </td>
