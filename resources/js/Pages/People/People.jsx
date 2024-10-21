@@ -215,7 +215,7 @@ const People = () => {
                                                 : person[field]}
                                         </td>
                                     ))}
-                                <td className=" py-4 flex space-x-2">
+                                <td className=" py-4 flex space-x-2 mr-3">
                                     <button
                                         onClick={() => handleEdit(person)}
                                         className="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-medium px-3 py-1.5 rounded shadow-md transition duration-300"
