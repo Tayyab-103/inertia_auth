@@ -172,7 +172,7 @@ const People = () => {
                 </div>
             )}
 
-            <table className="min-w-full mt-6 bg-white rounded-lg shadow-md overflow-hidden">
+            <table className="min-w-full mt-6 bg-white rounded-lg shadow-md">
                 <thead>
                     <tr className="bg-gray-200">
                         {[
