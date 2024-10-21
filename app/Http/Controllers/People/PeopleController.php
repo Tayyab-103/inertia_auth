@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\People;
 
 use App\Http\Controllers\Controller;
-use App\Mail\UserRegisteredMail;
+// use App\Mail\UserRegisteredMail;
 use App\Models\People;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+// use Illuminate\Support\Facades\Mail;
 
 class PeopleController extends Controller
 {
@@ -40,8 +40,8 @@ class PeopleController extends Controller
         $record = People::create($request->all());
 
         if ($record) {
-            // Sending the email after successful creation
-            Mail::to($record->email)->send(new UserRegisteredMail($record));
+            // // Sending the email after successful creation
+            // Mail::to($record->email)->send(new UserRegisteredMail($record));
 
             return response()->json([
                 'status'  => '200',
